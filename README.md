@@ -29,3 +29,15 @@ You need to also manually convert some blocks of text to proper formatting prior
 ```
 
 Later block of code can be converted without issues. First one will turn out weirdly converted.
+
+--- 
+
+## State of the project
+
+It's my first VSCode extension. Might get updates or might not. No promises 🤞
+
+---
+
+## Contributing
+
+You can contribute or fork the source code here: https://github.com/msyyn/liquify-vscode-extension

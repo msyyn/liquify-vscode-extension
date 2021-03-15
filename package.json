@@ -4,6 +4,7 @@
 	"description": "Convert existing Liquid code into a Liquid code block or vice versa.",
 	"version": "0.0.1",
   "publisher": "msyyn",
+  "repository": "https://github.com/msyyn/liquify-vscode-extension",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
