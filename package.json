@@ -2,15 +2,23 @@
 	"name": "liquify",
 	"displayName": "liquify",
 	"description": "Convert existing Liquid code into a Liquid code block or vice versa.",
-	"version": "1.0.0",
+	"version": "1.0.1",
   "publisher": "msyyn",
   "repository": "https://github.com/msyyn/liquify-vscode-extension",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
 	"categories": [
-		"Other"
+		"Other",
+    "Formatters",
+    "Programming Languages"
 	],
+  "tags": [
+    "shopify",
+    "liquid",
+    "formatting",
+    "html"
+  ],
 	"activationEvents": [
 		"onCommand:liquify.convertSelection"
 	],
