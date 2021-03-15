@@ -1,5 +1,7 @@
 # Liquify conversion
 
+![https://i.imgur.com/hk7fOAx.gif](https://i.imgur.com/hk7fOAx.gif)
+
 Convert traditional/basic way of writing Liquid to the new `{%- liquid -%}` block code.
 
 ---
