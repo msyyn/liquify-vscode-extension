@@ -1,8 +1,8 @@
 {
 	"name": "liquify",
 	"displayName": "liquify",
-	"description": "Convert existing Liquid code into a Liquid code block or vice versa.",
-	"version": "1.0.1",
+	"description": "Convert your multiple theme tags to use a single {% liquid %} code block.",
+	"version": "1.0.2",
   "publisher": "msyyn",
   "repository": "https://github.com/msyyn/liquify-vscode-extension",
 	"engines": {
