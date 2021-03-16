@@ -28,7 +28,7 @@ function activate(context) {
       const textContent = editor.document.getText(editRange); // selection text
 
       // @ts-ignore
-      let editedText = `{%- liquid\n${textContent.replaceAll('{%-', '{%').replaceAll('-%}', '%}').replaceAll('{%','').replaceAll('%}','').replaceAll('{{ ', 'echo ').replaceAll('{{', 'echo ').replaceAll('}}','')}\n-%}`;
+      let editedText = `{%- liquid\n\t${textContent.replaceAll('{%-', '{%').replaceAll('-%}', '%}').replaceAll('{%','').replaceAll('%}','').replaceAll('\n{{ ', 'echo ').replaceAll('\n{{', 'echo ').replaceAll('}}','')}\n-%}\n`;
       editBuilder.replace(editRange, editedText);
       vscode.window.showInformationMessage('Liquify conversion is ready. Please see through converted code manually to see everything is in place.');
     });
