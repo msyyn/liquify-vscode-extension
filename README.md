@@ -14,9 +14,9 @@ Select a block of text and run the `> Liquify: Convert selection to a {% liquid 
 
 ## Disclaimer
 
-Only supports simple conversions. For advanced blocks of Liquid, you should always go through the changes manually.
+Only supports conversion of Liquid code, i.e. not a mix of HTML and Liquid. It is also advised to format your code properly prior conversion.
 
-You need to also manually convert some blocks of text to proper formatting prior conversion. For example:
+Especially single-line `{% capture %}` tags should be manually converted for best results. See examples:
 
 **❌ WRONGLY FORMATTED**
 ```liquid
@@ -30,15 +30,22 @@ You need to also manually convert some blocks of text to proper formatting prior
 {% endcapture %}
 ```
 
-Later block of code can be converted without issues. First one will turn out weirdly converted.
+Later block of code can be converted without issues. First block of code might turn out weirdly formatted. 
 
---- 
+**Note that second block uses append filter to add the % symbol.*
 
-## State of the project
-
-It's my first VSCode extension. Might get updates or might not. No promises 🤞
+Single line `{% comment %}` tags are automatically split into multiple lines during the conversion process.
 
 ---
+
+## Known issues 
+- Single-line `{% capture %}` formatting does not work properly in all cases
+- Does not work with blocks containing a mix of HTML & Liquid code
+- Converted text does not tabulate all lines properly
+
+You can [open a issue on GitHub](https://github.com/msyyn/liquify-vscode-extension/issues).
+
+--- 
 
 ## Contributing
 
