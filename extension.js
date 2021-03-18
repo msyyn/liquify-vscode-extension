@@ -2,6 +2,9 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 
+// Import the parser
+const parser = require('./lib/parser');
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
@@ -22,13 +25,12 @@ function activate(context) {
 
     const selection = editor.selections[0];
     
-    
     editor.edit(async (editBuilder) => {
       const editRange = new vscode.Range(selection.start, selection.end); // selection range
       const textContent = editor.document.getText(editRange); // selection text
 
       // @ts-ignore
-      let editedText = `{%- liquid\n\t${textContent.replaceAll('{%-', '{%').replaceAll('-%}', '%}').replaceAll('{%','').replaceAll('%}','').replaceAll('\n{{ ', 'echo ').replaceAll('\n{{', 'echo ').replaceAll('}}','')}\n-%}\n`;
+      let editedText = parser.parseText(textContent);
       editBuilder.replace(editRange, editedText);
       vscode.window.showInformationMessage('Liquify conversion is ready. Please see through converted code manually to see everything is in place.');
     });
